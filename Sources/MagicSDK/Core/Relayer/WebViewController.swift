@@ -331,7 +331,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,
         let keyWindow = try getKeyWindow()
 
         keyWindow.addSubview(self.view)
-        keyWindow.sendSubviewToBack(self.view)
+        keyWindow.bringSubviewToFront(self.view)
 
         // find topmost view controller from the hierarchy and move webview to it
         if var topController = keyWindow.rootViewController {
